@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+    
+<category>
+    <pattern>HELLO</pattern>
+    <template>
+        Hello! I'm the Virtual Career Advisor. Are you looking for guidance on computing careers? If yes, let's identify your strengths first. Please type the keyword that best describes your interest: 'Design', 'Problem Solving', 'Data Analysis', 'Security', or 'Networking'. If not, please type 'No Guidance'.
+    </template>
+</category>
+
+<category>
+    <pattern>NO GUIDANCE</pattern>
+    <template>
+        I see you're not interested in career guidance right now. You can type 'End Chat' to conclude our conversation or say 'Hello' again to start over.
+    </template>
+</category>
+
+
+
+ <!-- Strength: Design -->
+    <category>
+        <pattern>DESIGN</pattern>
+        <template>
+           <set name="careerpath">UI UX Designer</set> - Design skills are crucial in fields like UI/UX.  Would you like to hear more about being a UI/UX Designer?
+        </template>
+    </category>
+
+    <!-- Strength: Problem-Solving -->
+    <category>
+        <pattern>PROBLEM SOLVING</pattern>
+        <template>
+            <set name="careerpath">Software Developer</set> - Problem solving skills are essential in software development. Would you like to hear more about being a Software Developer?
+        </template>
+    </category>
+
+    <!-- Strength: Data Analysis -->
+    <category>
+        <pattern>DATA ANALYSIS</pattern>
+        <template>
+           <set name="careerpath">Data Scientist</set> - A knack for data analysis can lead to a career in data science.  Would you like to hear more about being a Data Scientist?
+        </template>
+    </category>
+
+    <!-- Strength: Security -->
+    <category>
+        <pattern>SECURITY</pattern>
+        <template>
+            <set name="careerpath">Cybersecurity Analyst</set> - An interest in security is vital for cybersecurity roles. Would you like to hear more about being a Cybersecurity Analyst?
+        </template>
+    </category>
+
+    <!-- Strength: Networking -->
+    <category>
+        <pattern>NETWORKING</pattern>
+        <template>
+           <set name="careerpath">Network Engineer</set> - Skills in networking are key for network engineering.  Would you like to hear more about being a Network Engineer?
+        </template>
+    </category>
+
+
+<category>
+    <pattern>YES</pattern>
+     <template>
+    <condition name="careerpath">
+        <li value="UI UX Designer">UI/UX Designers create user-friendly and visually appealing application interfaces. They focus on user experience design, interface layout, and user journey. If you want to learn about another area, type 'Design', 'Problem-Solving', 'Data Analysis', 'Security', or 'Networking'. Otherwise, you can type 'End Chat' to finish our conversation.</li>
+
+        <li value="Software Developer">Software developers design, code, and test software. They need strong problem-solving skills and proficiency in languages like Java, Python, or C#. If you're curious about another field, type a different strength. To end our chat, type 'End Chat'.</li>
+
+        <li value="Data Scientist">Data Scientists work with large datasets to derive insights and make data-driven decisions. They need skills in statistics, machine learning, and proficiency with tools like R, Python, and SQL. To explore a different career path, type one of the strengths like 'Design' or 'Security', or type 'End Chat' to end our conversation.</li>
+
+        <li value="Cybersecurity Analyst">Cybersecurity Analysts protect information systems from cyber threats. They are skilled in network security, ethical hacking, and are knowledgeable about security compliance. If you wish to explore other areas, just type the respective strength. To finish our conversation, type 'End Chat'.</li>
+
+        <li value="Network Engineer">Network Engineers manage and set up computer networks within organizations. They focus on network configuration, cloud services, and problem-solving. Feel free to type another area of interest or 'End Chat' to conclude our chat.</li>
+
+        <li>I'm not sure which career you are asking about. Could you please specify or type 'End Chat' to finish our conversation?</li>
+    </condition>
+    </template>
+
+</category>
+
+
+
+<category>
+    <pattern>NO</pattern>
+    <template>
+        No problem! If you want to explore other areas like 'Design', 'Problem-Solving', 'Data Analysis', 'Security', or 'Networking', feel free to ask. Or, type 'End Chat' to finish our conversation.
+    </template>
+</category>
+
+
+
+<category>
+    <pattern>*</pattern>
+    <template>
+        I'm not sure I understand that. Could you please rephrase, or would you like to know about 'Design', 'Problem-Solving', 'Data Analysis', 'Security', or 'Networking'? You can also type 'End Chat' to finish our conversation.
+    </template>
+</category>
+
+<category>
+    <pattern>END CHAT</pattern>
+    <template>
+        Thank you for chatting with me. If you have more questions in the future or need further guidance, feel free to return. Goodbye!
+    </template>
+</category>
+
+<category>
+    <pattern>GOODBYE</pattern>
+    <template>
+        It was nice assisting you. Don't hesitate to come back if you need more career advice. Goodbye!
+    </template>
+</category>
+
+
+
+</aiml>
